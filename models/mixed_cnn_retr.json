@@ -1,0 +1,32 @@
+{
+ "task": "mixed",
+ "model": "cnn",
+ "cond": "retr",
+ "seed": 42,
+ "hyperparameters": {
+  "n_conv_blocks": 3,
+  "first_filters": 64,
+  "kernel_size": 11,
+  "dense_units": 128,
+  "dropout": 0.2185801650879991,
+  "l2_strength": 0.0006647135865318024,
+  "negative_slope": 0.04239958350058539,
+  "learning_rate": 0.00013492834268013249,
+  "batch_size": 128
+ },
+ "classes": [
+  "1:9 | Staph : PAO",
+  "3:7 | Staph : PAO",
+  "5:5 | Staph : PAO",
+  "7:3 | Staph : PAO",
+  "9:1 | Staph : PAO"
+ ],
+ "n_features": 388,
+ "acc_clean": 0.9697190510889806,
+ "acc_noisy": 0.9693142255687799,
+ "platform": "macOS-26.6.2-arm64-arm-64bit",
+ "minutes": 29.9,
+ "identical_to_paper_clean": 12351,
+ "identical_to_paper_noisy": 12351,
+ "n_test": 12351
+}

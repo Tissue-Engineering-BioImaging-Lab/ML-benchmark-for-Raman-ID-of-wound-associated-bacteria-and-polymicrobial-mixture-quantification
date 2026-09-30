@@ -1,0 +1,23 @@
+PASS  TensorFlow sees a GPU  []
+PASS  single: data shape (2376, 389)  expected (2376, 389)
+PASS  single: class counts  [396, 396, 396, 396, 396, 396]
+PASS  single: number of source files  6
+PASS  single: data checksum  369513.972609
+PASS  single: no missing values  
+PASS  single: test split identical to analysis  1b92f474da88d6ca
+PASS  single: noisy test set identical  73511.723721
+PASS  mixed: data shape (61754, 388)  expected (61754, 388)
+PASS  mixed: class counts  [19915, 9636, 10323, 9772, 12108]
+PASS  mixed: number of source files  18
+PASS  mixed: data checksum  8854989.292176
+PASS  mixed: no missing values  
+PASS  mixed: test split identical to analysis  f818b76f94c91b32
+PASS  mixed: noisy test set identical  1771723.091392
+PASS  single_cnn_clean: saved model reproduces the paper's predictions  476/476 clean, 476/476 noisy identical
+PASS  single_tr_clean: saved model reproduces the paper's predictions  476/476 clean, 476/476 noisy identical
+PASS  single_cnn_retr: saved model reproduces the paper's predictions  476/476 clean, 476/476 noisy identical
+PASS  single_tr_retr: saved model reproduces the paper's predictions  476/476 clean, 476/476 noisy identical
+PASS  mixed_cnn_clean: saved model reproduces the paper's predictions  12351/12351 clean, 12351/12351 noisy identical
+PASS  mixed_tr_clean: saved model reproduces the paper's predictions  12351/12351 clean, 12351/12351 noisy identical
+PASS  mixed_cnn_retr: saved model reproduces the paper's predictions  12351/12351 clean, 12351/12351 noisy identical
+PASS  mixed_tr_retr: saved model reproduces the paper's predictions  12351/12351 clean, 12351/12351 noisy identical

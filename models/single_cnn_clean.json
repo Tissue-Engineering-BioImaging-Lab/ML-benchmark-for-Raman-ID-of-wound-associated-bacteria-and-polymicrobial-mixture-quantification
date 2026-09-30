@@ -1,0 +1,33 @@
+{
+ "task": "single",
+ "model": "cnn",
+ "cond": "clean",
+ "seed": 42,
+ "hyperparameters": {
+  "n_conv_blocks": 3,
+  "first_filters": 32,
+  "kernel_size": 9,
+  "dense_units": 32,
+  "dropout": 0.4170784332632994,
+  "l2_strength": 2.6471141828218167e-05,
+  "negative_slope": 0.16241742634326756,
+  "learning_rate": 0.00014096175149815865,
+  "batch_size": 64
+ },
+ "classes": [
+  "Corn",
+  "E.coli",
+  "FAE",
+  "Malt",
+  "PAO1",
+  "STAPH"
+ ],
+ "n_features": 389,
+ "acc_clean": 0.9852941176470589,
+ "acc_noisy": 0.9852941176470589,
+ "platform": "macOS-26.6.2-arm64-arm-64bit",
+ "minutes": 0.6,
+ "identical_to_paper_clean": 476,
+ "identical_to_paper_noisy": 476,
+ "n_test": 476
+}
