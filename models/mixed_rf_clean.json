@@ -1,0 +1,29 @@
+{
+ "task": "mixed",
+ "model": "rf",
+ "cond": "clean",
+ "seed": 42,
+ "hyperparameters": {
+  "n_estimators": 331,
+  "max_depth": 22,
+  "min_samples_split": 4,
+  "min_samples_leaf": 6,
+  "max_features": "sqrt",
+  "criterion": "gini"
+ },
+ "classes": [
+  "1:9 | Staph : PAO",
+  "3:7 | Staph : PAO",
+  "5:5 | Staph : PAO",
+  "7:3 | Staph : PAO",
+  "9:1 | Staph : PAO"
+ ],
+ "n_features": 388,
+ "acc_clean": 0.9467249615415756,
+ "acc_noisy": 0.9417860901951259,
+ "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+ "minutes": 3.2,
+ "identical_to_paper_clean": 12351,
+ "identical_to_paper_noisy": 12351,
+ "n_test": 12351
+}

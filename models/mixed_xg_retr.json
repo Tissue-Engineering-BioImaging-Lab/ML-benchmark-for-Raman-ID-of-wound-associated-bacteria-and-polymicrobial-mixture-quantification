@@ -1,0 +1,32 @@
+{
+ "task": "mixed",
+ "model": "xg",
+ "cond": "retr",
+ "seed": 42,
+ "hyperparameters": {
+  "n_estimators": 683,
+  "max_depth": 6,
+  "learning_rate": 0.030967663148388794,
+  "min_child_weight": 12.406177699264658,
+  "subsample": 0.7450717765324351,
+  "colsample_bytree": 0.6236925898873151,
+  "reg_alpha": 1.0473668998704366,
+  "reg_lambda": 0.005148630436299059,
+  "gamma": 0.14091874487387746
+ },
+ "classes": [
+  "1:9 | Staph : PAO",
+  "3:7 | Staph : PAO",
+  "5:5 | Staph : PAO",
+  "7:3 | Staph : PAO",
+  "9:1 | Staph : PAO"
+ ],
+ "n_features": 388,
+ "acc_clean": 0.9700429115051413,
+ "acc_noisy": 0.9677758885920168,
+ "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+ "minutes": 6.0,
+ "identical_to_paper_clean": 12351,
+ "identical_to_paper_noisy": 12351,
+ "n_test": 12351
+}

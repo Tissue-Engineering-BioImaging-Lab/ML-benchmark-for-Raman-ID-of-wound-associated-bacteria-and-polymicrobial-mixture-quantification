@@ -1,0 +1,13 @@
+{
+ "cnn": {
+  "noise_after_scaling": 97.05287021293823,
+  "noise_before_scaling": 96.7937818800097,
+  "diff": 0.2590883329285276
+ },
+ "tr": {
+  "noise_after_scaling": 95.02064610153023,
+  "noise_before_scaling": 95.37689255930694,
+  "diff": -0.35624645777670594
+ },
+ "max_abs_diff": 0.35624645777670594
+}

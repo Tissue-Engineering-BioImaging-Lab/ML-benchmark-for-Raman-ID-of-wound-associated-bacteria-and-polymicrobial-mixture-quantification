@@ -1,0 +1,8 @@
+# run outputs
+model_comparison/output/
+model_comparison/output_quicktest/
+model_comparison/*.zip
+Distributable Notebooks/saved_models/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

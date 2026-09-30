@@ -1,0 +1,33 @@
+{
+ "task": "single",
+ "model": "xg",
+ "cond": "retr",
+ "seed": 42,
+ "hyperparameters": {
+  "n_estimators": 1176,
+  "max_depth": 2,
+  "learning_rate": 0.05374297155925067,
+  "min_child_weight": 12.360125970755028,
+  "subsample": 0.7371977115799859,
+  "colsample_bytree": 0.6815934080251946,
+  "reg_alpha": 0.008852856169031193,
+  "reg_lambda": 0.0003423590805296356,
+  "gamma": 2.526309738350949
+ },
+ "classes": [
+  "Corn",
+  "E.coli",
+  "FAE",
+  "Malt",
+  "PAO1",
+  "STAPH"
+ ],
+ "n_features": 389,
+ "acc_clean": 0.957983193277311,
+ "acc_noisy": 0.9621848739495799,
+ "platform": "Linux-6.18.44-fc-v50-x86_64-with-glibc2.39",
+ "minutes": 0.4,
+ "identical_to_paper_clean": 476,
+ "identical_to_paper_noisy": 476,
+ "n_test": 476
+}

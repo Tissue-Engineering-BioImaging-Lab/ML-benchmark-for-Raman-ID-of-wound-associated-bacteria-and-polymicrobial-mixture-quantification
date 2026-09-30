@@ -1,0 +1,57 @@
+PASS  TensorFlow sees a GPU  []
+PASS  single: data shape (2376, 389)  expected (2376, 389)
+PASS  single: class counts  [396, 396, 396, 396, 396, 396]
+PASS  single: number of source files  6
+PASS  single: data checksum  369513.972609
+PASS  single: no missing values  
+PASS  single: test split identical to analysis  1b92f474da88d6ca
+PASS  single: noisy test set identical  73511.723721
+PASS  mixed: data shape (61754, 388)  expected (61754, 388)
+PASS  mixed: class counts  [19915, 9636, 10323, 9772, 12108]
+PASS  mixed: number of source files  18
+PASS  mixed: data checksum  8854989.292176
+PASS  mixed: no missing values  
+PASS  mixed: test split identical to analysis  f818b76f94c91b32
+PASS  mixed: noisy test set identical  1771723.091392
+PASS  single: Random Forest reproduces the published model  94.33% (expected 94.33%)
+PASS  single: Random Forest CV folds reproduce the published values  [0.6282, 0.9368, 0.9347, 0.9326, 0.8232]
+PASS  mixed: Random Forest reproduces the published model  94.67% (expected 94.67%)
+PASS  mixed: Random Forest CV folds reproduce the published values  [0.8342, 0.9746, 0.8996, 0.9287, 0.7494]
+PASS  same test spectra for all models (clean_clean, rf)  
+PASS  same test spectra for all models (clean_clean, xg)  
+PASS  same test spectra for all models (clean_clean, cnn)  
+PASS  same test spectra for all models (clean_clean, tr)  
+PASS  McNemar identity (clean_clean, rf vs xg)  
+PASS  McNemar identity (clean_clean, rf vs cnn)  
+PASS  McNemar identity (clean_clean, rf vs tr)  
+PASS  McNemar identity (clean_clean, xg vs cnn)  
+PASS  McNemar identity (clean_clean, xg vs tr)  
+PASS  McNemar identity (clean_clean, cnn vs tr)  
+PASS  same test spectra for all models (clean_noisy, rf)  
+PASS  same test spectra for all models (clean_noisy, xg)  
+PASS  same test spectra for all models (clean_noisy, cnn)  
+PASS  same test spectra for all models (clean_noisy, tr)  
+PASS  McNemar identity (clean_noisy, rf vs xg)  
+PASS  McNemar identity (clean_noisy, rf vs cnn)  
+PASS  McNemar identity (clean_noisy, rf vs tr)  
+PASS  McNemar identity (clean_noisy, xg vs cnn)  
+PASS  McNemar identity (clean_noisy, xg vs tr)  
+PASS  McNemar identity (clean_noisy, cnn vs tr)  
+PASS  same test spectra for all models (retrained_noisy, rf)  
+PASS  same test spectra for all models (retrained_noisy, xg)  
+PASS  same test spectra for all models (retrained_noisy, cnn)  
+PASS  same test spectra for all models (retrained_noisy, tr)  
+PASS  McNemar identity (retrained_noisy, rf vs xg)  
+PASS  McNemar identity (retrained_noisy, rf vs cnn)  
+PASS  McNemar identity (retrained_noisy, rf vs tr)  
+PASS  McNemar identity (retrained_noisy, xg vs cnn)  
+PASS  McNemar identity (retrained_noisy, xg vs tr)  
+PASS  McNemar identity (retrained_noisy, cnn vs tr)  
+PASS  single Random Forest clean accuracy close to published value  94.33% vs 94.33%
+PASS  single XGBoost clean accuracy close to published value  95.17% vs 95.59%
+PASS  single CNN clean accuracy close to published value  98.53% vs 98.74%
+WARN  single Transformer clean accuracy close to published value  89.71% vs 87.61%
+PASS  mixed Random Forest clean accuracy close to published value  94.67% vs 94.67%
+PASS  mixed XGBoost clean accuracy close to published value  96.30% vs 96.39%
+PASS  mixed CNN clean accuracy close to published value  97.00% vs 97.04%
+PASS  mixed Transformer clean accuracy close to published value  95.39% vs 95.13%

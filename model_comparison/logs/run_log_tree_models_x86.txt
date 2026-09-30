@@ -1,0 +1,190 @@
+[2026-09-29 10:59:52] ======================================================================
+[2026-09-29 10:59:52] Raman corrected re-run  (quick=False)  python 3.11.15
+[2026-09-29 11:00:30] versions: numpy 2.4.4, pandas 3.0.2, sklearn 1.8.0, xgboost 3.2.0, tensorflow 2.21.0, keras 3.15.1
+[2026-09-29 11:00:30] GPUs visible to TensorFlow: []
+[2026-09-29 11:00:30] CHECK PASS: TensorFlow sees a GPU []
+[2026-09-29 11:00:30] XGBoost GPU unavailable (no CUDA build or no GPU); using CPU
+[2026-09-29 11:00:30] XGBoost device: cpu
+[2026-09-29 11:00:30] CHECK PASS: single: data shape (2376, 389) expected (2376, 389)
+[2026-09-29 11:00:30] CHECK PASS: single: class counts [396, 396, 396, 396, 396, 396]
+[2026-09-29 11:00:30] CHECK PASS: single: number of source files 6
+[2026-09-29 11:00:30] CHECK PASS: single: data checksum 369513.972609
+[2026-09-29 11:00:30] CHECK PASS: single: no missing values 
+[2026-09-29 11:00:30] CHECK PASS: single: test split identical to analysis 1b92f474da88d6ca
+[2026-09-29 11:00:30] CHECK PASS: single: noisy test set identical 73511.723721
+[2026-09-29 11:00:30] single: 2376 spectra, 6 classes, train 1900, test 476
+[2026-09-29 11:00:45] CHECK PASS: mixed: data shape (61754, 388) expected (61754, 388)
+[2026-09-29 11:00:45] CHECK PASS: mixed: class counts [19915, 9636, 10323, 9772, 12108]
+[2026-09-29 11:00:45] CHECK PASS: mixed: number of source files 18
+[2026-09-29 11:00:46] CHECK PASS: mixed: data checksum 8854989.292176
+[2026-09-29 11:00:46] CHECK PASS: mixed: no missing values 
+[2026-09-29 11:00:46] CHECK PASS: mixed: test split identical to analysis f818b76f94c91b32
+[2026-09-29 11:00:46] CHECK PASS: mixed: noisy test set identical 1771723.091392
+[2026-09-29 11:00:46] mixed: 61754 spectra, 5 classes, train 49403, test 12351
+[2026-09-29 11:00:46] --- job 1/16
+[2026-09-29 11:00:46] START single_rf_clean
+[2026-09-29 11:00:50]   single_rf_clean CV fold 1/5: 0.6282
+[2026-09-29 11:00:52]   single_rf_clean CV fold 2/5: 0.9368
+[2026-09-29 11:00:55]   single_rf_clean CV fold 3/5: 0.9347
+[2026-09-29 11:00:57]   single_rf_clean CV fold 4/5: 0.9326
+[2026-09-29 11:00:59]   single_rf_clean CV fold 5/5: 0.8232
+[2026-09-29 11:00:59] DONE  single_rf_clean: clean 94.33%  noisy 94.12%  train 99.21%  CV [0.6282, 0.9368, 0.9347, 0.9326, 0.8232]  (0.2 min)
+[2026-09-29 11:00:59] CHECK PASS: single: Random Forest reproduces the published model 94.33% (expected 94.33%)
+[2026-09-29 11:00:59] CHECK PASS: single: Random Forest CV folds reproduce the published values [0.6282, 0.9368, 0.9347, 0.9326, 0.8232]
+[2026-09-29 11:00:59] --- job 2/16
+[2026-09-29 11:00:59] START single_xg_clean
+[2026-09-29 11:01:13]   single_xg_clean CV fold 1/5: 0.7668
+[2026-09-29 11:01:19]   single_xg_clean CV fold 2/5: 0.9284
+[2026-09-29 11:01:26]   single_xg_clean CV fold 3/5: 0.9516
+[2026-09-29 11:01:33]   single_xg_clean CV fold 4/5: 0.9516
+[2026-09-29 11:01:39]   single_xg_clean CV fold 5/5: 0.8800
+[2026-09-29 11:01:39] DONE  single_xg_clean: clean 95.17%  noisy 96.22%  train 100.00%  CV [0.7668, 0.9284, 0.9516, 0.9516, 0.88]  (0.7 min)
+[2026-09-29 11:01:39] --- job 3/16
+[2026-09-29 11:01:39] skip single_cnn_clean (already done)
+[2026-09-29 11:01:39] --- job 4/16
+[2026-09-29 11:01:39] skip single_tr_clean (already done)
+[2026-09-29 11:01:39] --- job 5/16
+[2026-09-29 11:01:39] START single_rf_retr
+[2026-09-29 11:01:49]   single_rf_retr CV fold 1/5: 0.6408
+[2026-09-29 11:01:54]   single_rf_retr CV fold 2/5: 0.9474
+[2026-09-29 11:02:02]   single_rf_retr CV fold 3/5: 0.9368
+[2026-09-29 11:02:07]   single_rf_retr CV fold 4/5: 0.9347
+[2026-09-29 11:02:12]   single_rf_retr CV fold 5/5: 0.8295
+[2026-09-29 11:02:12] DONE  single_rf_retr: clean 95.17%  noisy 95.38%  train 99.92%  CV [0.6408, 0.9474, 0.9368, 0.9347, 0.8295]  (0.5 min)
+[2026-09-29 11:02:12] --- job 6/16
+[2026-09-29 11:02:12] START single_xg_retr
+[2026-09-29 11:03:00]   single_xg_retr CV fold 1/5: 0.8067
+[2026-09-29 11:03:25]   single_xg_retr CV fold 2/5: 0.9305
+[2026-09-29 11:03:48]   single_xg_retr CV fold 3/5: 0.9558
+[2026-09-29 11:04:11]   single_xg_retr CV fold 4/5: 0.9432
+[2026-09-29 11:04:36]   single_xg_retr CV fold 5/5: 0.9011
+[2026-09-29 11:04:36] DONE  single_xg_retr: clean 95.80%  noisy 96.22%  train 99.84%  CV [0.8067, 0.9305, 0.9558, 0.9432, 0.9011]  (2.4 min)
+[2026-09-29 11:04:36] --- job 7/16
+[2026-09-29 11:04:36] skip single_cnn_retr (already done)
+[2026-09-29 11:04:36] --- job 8/16
+[2026-09-29 11:04:36] skip single_tr_retr (already done)
+[2026-09-29 11:04:36] --- job 9/16
+[2026-09-29 11:04:36] START mixed_rf_clean
+[2026-09-29 11:10:20]   mixed_rf_clean CV fold 1/5: 0.8342
+[2026-09-29 11:13:12]   mixed_rf_clean CV fold 2/5: 0.9746
+[2026-09-29 11:16:03]   mixed_rf_clean CV fold 3/5: 0.8996
+[2026-09-29 11:19:02]   mixed_rf_clean CV fold 4/5: 0.9287
+[2026-09-29 11:22:07]   mixed_rf_clean CV fold 5/5: 0.7494
+[2026-09-29 11:22:07] DONE  mixed_rf_clean: clean 94.67%  noisy 94.18%  train 98.85%  CV [0.8342, 0.9746, 0.8996, 0.9287, 0.7494]  (17.5 min)
+[2026-09-29 11:22:07] CHECK PASS: mixed: Random Forest reproduces the published model 94.67% (expected 94.67%)
+[2026-09-29 11:22:07] CHECK PASS: mixed: Random Forest CV folds reproduce the published values [0.8342, 0.9746, 0.8996, 0.9287, 0.7494]
+[2026-09-29 11:22:07] --- job 10/16
+[2026-09-29 11:22:07] START mixed_xg_clean
+[2026-09-29 11:26:52]   mixed_xg_clean CV fold 1/5: 0.9133
+[2026-09-29 11:29:12]   mixed_xg_clean CV fold 2/5: 0.9789
+[2026-09-29 11:31:33]   mixed_xg_clean CV fold 3/5: 0.9066
+[2026-09-29 11:33:55]   mixed_xg_clean CV fold 4/5: 0.9567
+[2026-09-29 11:36:10]   mixed_xg_clean CV fold 5/5: 0.7842
+[2026-09-29 11:36:10] DONE  mixed_xg_clean: clean 96.30%  noisy 95.85%  train 99.13%  CV [0.9133, 0.9789, 0.9066, 0.9567, 0.7842]  (14.0 min)
+[2026-09-29 11:36:10] --- job 11/16
+[2026-09-29 11:36:10] skip mixed_cnn_clean (already done)
+[2026-09-29 11:36:10] --- job 12/16
+[2026-09-29 11:36:10] skip mixed_tr_clean (already done)
+[2026-09-29 11:36:10] --- job 13/16
+[2026-09-29 11:36:10] START mixed_rf_retr
+[2026-09-29 11:48:06]   mixed_rf_retr CV fold 1/5: 0.8556
+[2026-09-29 11:54:00]   mixed_rf_retr CV fold 2/5: 0.9775
+[2026-09-29 11:59:50]   mixed_rf_retr CV fold 3/5: 0.9037
+[2026-09-29 12:06:08]   mixed_rf_retr CV fold 4/5: 0.9359
+[2026-09-29 12:12:28]   mixed_rf_retr CV fold 5/5: 0.7587
+[2026-09-29 12:12:28] DONE  mixed_rf_retr: clean 95.36%  noisy 95.17%  train 99.65%  CV [0.8556, 0.9775, 0.9037, 0.9359, 0.7587]  (36.3 min)
+[2026-09-29 12:12:28] --- job 14/16
+[2026-09-29 12:12:28] START mixed_xg_retr
+[2026-09-29 12:24:30]   mixed_xg_retr CV fold 1/5: 0.9205
+[2026-09-29 12:30:31]   mixed_xg_retr CV fold 2/5: 0.9836
+[2026-09-29 12:36:17]   mixed_xg_retr CV fold 3/5: 0.9105
+[2026-09-29 12:42:02]   mixed_xg_retr CV fold 4/5: 0.9598
+[2026-09-29 12:47:43]   mixed_xg_retr CV fold 5/5: 0.7897
+[2026-09-29 12:47:43] DONE  mixed_xg_retr: clean 97.00%  noisy 96.78%  train 99.91%  CV [0.9205, 0.9836, 0.9105, 0.9598, 0.7897]  (35.2 min)
+[2026-09-29 12:47:43] --- job 15/16
+[2026-09-29 12:47:43] skip mixed_cnn_retr (already done)
+[2026-09-29 12:47:43] --- job 16/16
+[2026-09-29 12:47:43] skip mixed_tr_retr (already done)
+[2026-09-29 12:47:43] --- robustness: extra random seeds for the single-species neural networks
+[2026-09-29 12:47:43] skip single_cnn_clean_seed1 (already done)
+[2026-09-29 12:47:43] skip single_cnn_retr_seed1 (already done)
+[2026-09-29 12:47:43] skip single_tr_clean_seed1 (already done)
+[2026-09-29 12:47:43] skip single_tr_retr_seed1 (already done)
+[2026-09-29 12:47:43] skip single_cnn_clean_seed2 (already done)
+[2026-09-29 12:47:43] skip single_cnn_retr_seed2 (already done)
+[2026-09-29 12:47:43] skip single_tr_clean_seed2 (already done)
+[2026-09-29 12:47:43] skip single_tr_retr_seed2 (already done)
+[2026-09-29 12:47:43] skip single_cnn_clean_seed3 (already done)
+[2026-09-29 12:47:43] skip single_cnn_retr_seed3 (already done)
+[2026-09-29 12:47:43] skip single_tr_clean_seed3 (already done)
+[2026-09-29 12:47:43] skip single_tr_retr_seed3 (already done)
+[2026-09-29 12:47:43] skip single_cnn_clean_seed4 (already done)
+[2026-09-29 12:47:43] skip single_cnn_retr_seed4 (already done)
+[2026-09-29 12:47:43] skip single_tr_clean_seed4 (already done)
+[2026-09-29 12:47:43] skip single_tr_retr_seed4 (already done)
+[2026-09-29 12:47:43] skip single_cnn_clean_seed5 (already done)
+[2026-09-29 12:47:43] skip single_cnn_retr_seed5 (already done)
+[2026-09-29 12:47:43] skip single_tr_clean_seed5 (already done)
+[2026-09-29 12:47:43] skip single_tr_retr_seed5 (already done)
+[2026-09-29 12:47:43] --- sensitivity: noise added after scaling (mixed CNN/Transformer)
+[2026-09-29 12:47:43] skip mixed_cnn_clean_altnoise
+[2026-09-29 12:47:43] skip mixed_tr_clean_altnoise
+[2026-09-29 12:47:43] summary tables written
+[2026-09-29 12:47:43] 
+SINGLE accuracy (%):
+condition      clean/clean  clean/noisy  retrained/clean  retrained/noisy
+model                                                                    
+CNN                  98.53        98.53            98.32            98.53
+Random Forest        94.33        94.12            95.17            95.38
+Transformer          89.71        90.34            90.34            89.29
+XGBoost              95.17        96.22            95.80            96.22
+[2026-09-29 12:47:43] 
+MIXED accuracy (%):
+condition      clean/clean  clean/noisy  retrained/clean  retrained/noisy
+model                                                                    
+CNN                  97.00        96.79            96.97            96.93
+Random Forest        94.67        94.18            95.36            95.17
+Transformer          95.39        95.38            95.45            95.53
+XGBoost              96.30        95.85            97.00            96.78
+[2026-09-29 12:47:43] CHECK PASS: same test spectra for all models (clean_clean, rf) 
+[2026-09-29 12:47:43] CHECK PASS: same test spectra for all models (clean_clean, xg) 
+[2026-09-29 12:47:43] CHECK PASS: same test spectra for all models (clean_clean, cnn) 
+[2026-09-29 12:47:43] CHECK PASS: same test spectra for all models (clean_clean, tr) 
+[2026-09-29 12:47:44] CHECK PASS: McNemar identity (clean_clean, rf vs xg) 
+[2026-09-29 12:47:44] CHECK PASS: McNemar identity (clean_clean, rf vs cnn) 
+[2026-09-29 12:47:44] CHECK PASS: McNemar identity (clean_clean, rf vs tr) 
+[2026-09-29 12:47:44] CHECK PASS: McNemar identity (clean_clean, xg vs cnn) 
+[2026-09-29 12:47:44] CHECK PASS: McNemar identity (clean_clean, xg vs tr) 
+[2026-09-29 12:47:44] CHECK PASS: McNemar identity (clean_clean, cnn vs tr) 
+[2026-09-29 12:47:44] statistics written: clean_clean
+[2026-09-29 12:47:44] CHECK PASS: same test spectra for all models (clean_noisy, rf) 
+[2026-09-29 12:47:44] CHECK PASS: same test spectra for all models (clean_noisy, xg) 
+[2026-09-29 12:47:44] CHECK PASS: same test spectra for all models (clean_noisy, cnn) 
+[2026-09-29 12:47:44] CHECK PASS: same test spectra for all models (clean_noisy, tr) 
+[2026-09-29 12:47:45] CHECK PASS: McNemar identity (clean_noisy, rf vs xg) 
+[2026-09-29 12:47:45] CHECK PASS: McNemar identity (clean_noisy, rf vs cnn) 
+[2026-09-29 12:47:45] CHECK PASS: McNemar identity (clean_noisy, rf vs tr) 
+[2026-09-29 12:47:45] CHECK PASS: McNemar identity (clean_noisy, xg vs cnn) 
+[2026-09-29 12:47:45] CHECK PASS: McNemar identity (clean_noisy, xg vs tr) 
+[2026-09-29 12:47:45] CHECK PASS: McNemar identity (clean_noisy, cnn vs tr) 
+[2026-09-29 12:47:45] statistics written: clean_noisy
+[2026-09-29 12:47:45] CHECK PASS: same test spectra for all models (retrained_noisy, rf) 
+[2026-09-29 12:47:45] CHECK PASS: same test spectra for all models (retrained_noisy, xg) 
+[2026-09-29 12:47:45] CHECK PASS: same test spectra for all models (retrained_noisy, cnn) 
+[2026-09-29 12:47:45] CHECK PASS: same test spectra for all models (retrained_noisy, tr) 
+[2026-09-29 12:47:46] CHECK PASS: McNemar identity (retrained_noisy, rf vs xg) 
+[2026-09-29 12:47:46] CHECK PASS: McNemar identity (retrained_noisy, rf vs cnn) 
+[2026-09-29 12:47:46] CHECK PASS: McNemar identity (retrained_noisy, rf vs tr) 
+[2026-09-29 12:47:46] CHECK PASS: McNemar identity (retrained_noisy, xg vs cnn) 
+[2026-09-29 12:47:46] CHECK PASS: McNemar identity (retrained_noisy, xg vs tr) 
+[2026-09-29 12:47:46] CHECK PASS: McNemar identity (retrained_noisy, cnn vs tr) 
+[2026-09-29 12:47:47] statistics written: retrained_noisy
+[2026-09-29 12:47:47] CHECK PASS: single Random Forest clean accuracy close to published value 94.33% vs 94.33%
+[2026-09-29 12:47:47] CHECK PASS: single XGBoost clean accuracy close to published value 95.17% vs 95.59%
+[2026-09-29 12:47:47] CHECK PASS: single CNN clean accuracy close to published value 98.53% vs 98.74%
+[2026-09-29 12:47:47] CHECK WARN: single Transformer clean accuracy close to published value 89.71% vs 87.61%
+[2026-09-29 12:47:47] CHECK PASS: mixed Random Forest clean accuracy close to published value 94.67% vs 94.67%
+[2026-09-29 12:47:47] CHECK PASS: mixed XGBoost clean accuracy close to published value 96.30% vs 96.39%
+[2026-09-29 12:47:47] CHECK PASS: mixed CNN clean accuracy close to published value 97.00% vs 97.04%
+[2026-09-29 12:47:47] CHECK PASS: mixed Transformer clean accuracy close to published value 95.39% vs 95.13%
+[2026-09-29 12:47:47] FINISHED. 57 checks: 0 failed, 1 warnings. Results: rerun_results.zip
