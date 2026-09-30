@@ -49,12 +49,11 @@ All four models are largely insensitive to the added noise (−0.5 to +1.1 perce
 ├── Raman_Preprocessing.ipynb      Cropping, outlier removal and normalization
 ├── general_info.ipynb             Dataset summary: spectrum counts, mean spectra
 ├── combine_csvs_by_prefix.py      Stack CSVs of the same species into one file
-├── PCA/  ICA/  SVD/  ZCA/         Exploratory decomposition notebooks, with their figures
 │
 ├── Distributable Notebooks/       Self-contained notebooks + the data the models read
 │   ├── data/                      Normalized spectra, one file per replicate (read by all models)
 │   ├── raw_data/                  Original acquisitions for the mixed-ratio data
-│   ├── New Notebooks/             Classifier notebooks (hyperparameter searches) and decomposition notebooks
+│   ├── New Notebooks/             Classifier notebooks (hyperparameter searches) and the PCA, ICA, SVD and ZCA notebooks
 │   └── README.ipynb               Walk-through of every notebook
 │
 ├── model_comparison/              pipeline.py: produces every number in the paper; predictions, results, logs
@@ -115,7 +114,7 @@ Steps 2 and 3 write to `data/fingerprint_region/mixed_ratio/Outlier Removed and 
 
 ## Notebooks
 
-`Distributable Notebooks/New Notebooks/` has one notebook per classifier and task (`RF`, `XG`, `CNN`, `Transformer` × `mixed`, `six_single`), plus `*_combined` variants for the noise-augmented models, and the four decomposition notebooks. `Distributable Notebooks/README.ipynb` walks through each one.
+`Distributable Notebooks/New Notebooks/` has one notebook per classifier and task (`RF`, `XG`, `CNN`, `Transformer` × `mixed`, `six_single`), plus `*_combined` variants for the noise-augmented models, and the four decomposition notebooks (PCA, ICA, SVD, ZCA) behind the exploratory analysis in the paper. `Distributable Notebooks/README.ipynb` walks through each one.
 
 The classifier notebooks are the record of the original Optuna hyperparameter searches; the tuned values are listed in Supplementary Tables 2 and 4 of the paper and are reused by `model_comparison/pipeline.py`. Their outputs have been cleared, because their test-set results are superseded by the pipeline (see [Changes](#changes-from-the-original-analysis)).
 
