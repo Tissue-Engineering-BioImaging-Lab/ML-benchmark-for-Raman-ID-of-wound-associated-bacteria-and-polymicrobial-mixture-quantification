@@ -66,7 +66,6 @@ Training accuracy, 5-fold cross-validation, precision, recall, F1 and all statis
 │   ├── data/                      Normalized spectra read by the models (one file per replicate)
 │   ├── raw_data/                  Raw acquisition files (.mat) for the mixed-ratio data
 │   ├── New Notebooks/             Classifier notebooks and the PCA, ICA, SVD and ZCA notebooks
-│   ├── README.ipynb               Walk-through of every notebook
 │   └── train_gpu_headless.ps1     Runs a notebook on the GPU (see Notebooks)
 │
 ├── model_comparison/
@@ -94,9 +93,7 @@ python pipeline.py --check-only --allow-cpu   # checks the data, split and noisy
 python pipeline.py --allow-cpu                # full run
 ```
 
-Before training, `pipeline.py` checks the data, the train/test split and the noisy test set against fixed fingerprints, and stops if anything differs. The full run trains every model with 5-fold cross-validation and takes many hours on a CPU. Without `--allow-cpu`, the script requires a GPU. An interrupted run can be restarted with the same command; finished models are skipped. Results are written to `model_comparison/output/`.
-
-`model_comparison/README.md` describes the protocol, the statistical tests and the output files.
+Before training, `pipeline.py` checks the data, the train/test split and the noisy test set against fixed fingerprints, and stops if anything differs. The full run trains every model with 5-fold cross-validation and takes many hours on a CPU. Without `--allow-cpu`, the script requires a GPU. An interrupted run can be restarted with the same command; finished models are skipped. Results are written to `model_comparison/output/`. The evaluation protocol and statistical tests are described in the Methods section of the paper.
 
 ## Trained models
 
@@ -143,7 +140,7 @@ Steps 2 and 3 write to `data/fingerprint_region/mixed_ratio/Outlier Removed and 
 
 ## Notebooks
 
-`Distributable Notebooks/New Notebooks/` contains one notebook per classifier and task (`RF`, `XG`, `CNN` and `Transformer`, each for `mixed` and `six_single`), a `*_combined` variant of each for the noise-augmented training set, and the PCA, ICA, SVD and ZCA notebooks behind the exploratory analysis. `Distributable Notebooks/README.ipynb` walks through each one.
+`Distributable Notebooks/New Notebooks/` contains one notebook per classifier and task (`RF`, `XG`, `CNN` and `Transformer`, each for `mixed` and `six_single`), a `*_combined` variant of each for the noise-augmented training set, and the PCA, ICA, SVD and ZCA notebooks behind the exploratory analysis.
 
 The classifier notebooks contain the Optuna hyperparameter searches. Their tuned values are listed in Supplementary Tables 2 and 4 of the paper and are used by `model_comparison/pipeline.py`, which implements the evaluation reported in the paper. The notebooks are distributed with their outputs cleared; use `pipeline.py` to reproduce the paper's results.
 
