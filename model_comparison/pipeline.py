@@ -226,7 +226,7 @@ def run_job(task, k, cond, D, args, seed=42, do_cv=True, suffix=""):
         Xtr, ytr = (X[tr], y[tr]) if cond == "clean" else augment(X, y, tr)
     train_acc = float(np.mean(pred(Xtr) == ytr))
     pc, pn = pred(X[te]), pred(Xte_noisy)
-    # ---- 5-fold CV (same fold schemes as the original notebooks; noise added inside folds)
+    # ---- 5-fold CV (same fold schemes as the classifier notebooks; noise added inside folds)
     cv = []
     if do_cv and not args.no_cv:
         if k in ("rf", "xg"):
